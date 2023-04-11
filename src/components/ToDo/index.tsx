@@ -1,18 +1,21 @@
 import { ToDoCard } from "../ToDoCard"
 import style from './style.module.css'
 
-interface props{
-    todo: string
+type Task = {
+    todo: string[],
+    ClickDelet: () => void
 }
-export const ToDo = ({todo}: props) => {
+export const ToDo = ({todo, ClickDelet}: Task) => {
     return(
         <div className={style.todo}>
-            <ToDoCard todo={todo}/>
-            <ToDoCard todo={todo}/>
-            <ToDoCard todo={todo}/>
-            <ToDoCard todo={todo}/>
-            <ToDoCard todo={todo}/>
-            <ToDoCard todo={todo}/>
+            <p className={style.p}>TO DO:</p>
+
+            <div className={style.itens_todo}>
+                {todo.map((todos, index) => (
+                    <ToDoCard todo={todos} ClickDelet={ClickDelet} key={index}/>
+                ))}
+            </div>
+         
         </div>
     )
 }

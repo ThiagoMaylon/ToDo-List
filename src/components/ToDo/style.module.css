@@ -1,5 +1,17 @@
 .todo{
     display: flex;
     flex-direction: column;
+}
+.p{
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 15px;
+    color: #ccc;
+    text-align: start;
+}
+.itens_todo,
+.itens_completed{
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
