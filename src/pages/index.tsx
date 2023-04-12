@@ -15,9 +15,7 @@ export default function Home() {
     setNewTask(" ")
   }
 
-  const ClickDelet = () => {
-    alert('delet')
-  }
+
   return (
     <>
       <Head>
@@ -40,7 +38,7 @@ export default function Home() {
         </form>
 
         
-        <ToDo todo={task} ClickDelet={ClickDelet}/>
+        <ToDo todo={task} />
       </main>
     </>
   )

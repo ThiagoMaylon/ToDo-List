@@ -4,10 +4,9 @@ import style from './style.module.css';
 
 interface props{
     todo: string,
-    ClickDelet: () => void
 }
 
-export const ToDoCard = ({todo, ClickDelet}: props) => {
+export const ToDoCard = ({todo, }: props) => {
     const [complet, setComplet] = useState<string>("")
 
     const handleClick = () => {
@@ -24,7 +23,6 @@ export const ToDoCard = ({todo, ClickDelet}: props) => {
                     <IoMdTrash 
                         size={20} 
                         color='#aaa'
-                        onClick={ClickDelet}
                     />
                 </div>
             </div>
